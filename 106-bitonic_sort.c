@@ -13,8 +13,6 @@ void swap(int *a, int *b)
 	*b = tmp;
 }
 
-
-
 /**
  * bit_sort - Divides an array in 2 parts
  * @array: array of ints
