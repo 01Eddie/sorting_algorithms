@@ -24,13 +24,16 @@ int getMax(int *array, int n)
  * @array: Pointer integer
  * @size: Size_t
  * @exp: integer
+ * @output: Pointer integer
  * Return: void
  *  according to the digit represented by exp.
  */
-void countSort(int *array, int size, int exp)
+void countSort(int *array, int size, int exp, int *output)
 {
-	int output[size]; /*Output array*/
-	int i, count[10] = { 0 };
+	/*int output[size];*/ /*Output array*/
+	int count[10] = { 0 };
+	int i;
+
 	/*Store count of occurrence in count[] */
 	for (i = 0; i < size; i++)
 		count[(array[i] / exp) % 10]++;
@@ -80,7 +83,7 @@ void radix_sort(int *array, size_t size)
 
 	for (exp = 1; max / exp > 0; exp *= 10)
 	{
-		countSort(array, size, exp);
+		countSort(array, size, exp, sz);
 		print_array(array, size);
 	}
 	free(sz);
