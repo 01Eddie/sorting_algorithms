@@ -72,14 +72,14 @@ void radix_sort(int *array, size_t size)
 	int max;
 	int *sz;
 
-	sz = (malloc(sizeof(int) * size));
-	max = getMax(array, size);
-
 	if (!array || size < 2)
 		return;
 
+	sz = (malloc(sizeof(int) * size));
 	if (!sz)
 		return;
+
+	max = getMax(array, size);
 
 	for (exp = 1; max / exp > 0; exp *= 10)
 	{
