@@ -50,8 +50,7 @@ void quick_sort_hoare(int *array, size_t size);
 MaxHeap_t *createAndBuildHeap(int *array, int size);
 void maxHeapify(MaxHeap_t *maxHeap, int idx, int *array, size_t size);
 int getMax(int *array, int n);
-void countSort(int *array, int size, int exp);
-
+void countSort(int *array, int size, int exp, int *output);
 /* Extra functions */
 void swap(int *xp, int *yp);
 void quick(int *array, size_t size, int low, int high);
